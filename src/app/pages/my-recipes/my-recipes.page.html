@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="addNew()">
+        <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      My Recipes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">My Recipes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-list>
+    <div *ngFor="let recipe of recipes">
+      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+      <ion-item>
+        <ion-button>
+          <ion-icon slot="start" name="pencil"></ion-icon>
+          Edit recipe
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="end" name="trash"></ion-icon>
+          Remove
+        </ion-button>
+      </ion-item>
+    </div>
+  </ion-list>
+
+</ion-content>
