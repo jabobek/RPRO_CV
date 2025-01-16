@@ -1,7 +1,0 @@
-{
-  "name": "home-recipes-angular",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
